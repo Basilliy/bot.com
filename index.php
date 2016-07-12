@@ -4,10 +4,10 @@ $token = "246470400:AAElj-KNd6S9mTyo6wesYzyU8OrquBHQKRA";
 
 $url  = "https://api.telegram.org/bot".$token;
 
-$update = file_get_contents($url."/getupdates");
-$result = json_decode($update, TRUE);
-$id = $result["result"][0]["message"]["chat"]["id"];
-print_r("up = ".$update);
+//$update = file_get_contents($url."/getupdates");
+$result = json_decode($_POST, TRUE);
+$id = $_POST["result"][0]["message"]["chat"]["id"];
+print_r("up = ".$_POST);
 print_r("res=".$result);
 print_r("/n");
 print_r("id = ".$id);
