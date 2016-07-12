@@ -6,8 +6,8 @@ $url  = "https://api.telegram.org/bot".$token;
 
 
 //$result = json_decode($update, TRUE);
-$id = $_GET["result"][0]["message"]["chat"]["id"];
-print_r("GET=".$_GET);
+$id = $_POST["result"][0]["message"]["chat"]["id"];
+print_r("GET=".$_POST);
 print_r("id = ".$id);
 //echo curl_version();
 //////////ВАЖНО /////
